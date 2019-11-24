@@ -33,12 +33,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bq8-3u-vVO">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bq8-3u-vVO">
                                 <rect key="frame" x="59" y="319" width="257" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="swS-vz-yB7"/>
                                     <constraint firstAttribute="width" constant="253" id="tCS-Z2-t4l"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="SSM-Yj-Nb0"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T-Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vka-8y-yYt">
                                 <rect key="frame" x="66.5" y="56" width="242" height="44.5"/>
@@ -124,6 +127,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="JFY-6z-G6v" id="FPy-9d-DLL"/>
+                        <outlet property="fahrenheitLabel" destination="b3L-ZD-LBV" id="Jbr-lh-J34"/>
+                        <outlet property="slider" destination="bq8-3u-vVO" id="cu2-1q-4L0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
